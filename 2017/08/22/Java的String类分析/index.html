@@ -94,15 +94,16 @@
 
 
 
-<meta name="description" content="记录工作和生活中的随想，生性惫懒，更新日期不定">
-<meta property="og:type" content="website">
-<meta property="og:title" content="公无渡河，公竟渡河">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java的String类分析">
+<meta property="og:url" content="http://yoursite.com/2017/08/22/Java的String类分析/index.html">
 <meta property="og:site_name" content="公无渡河，公竟渡河">
-<meta property="og:description" content="记录工作和生活中的随想，生性惫懒，更新日期不定">
+<meta property="og:description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
+<meta property="og:updated_time" content="2017-08-22T08:13:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="公无渡河，公竟渡河">
-<meta name="twitter:description" content="记录工作和生活中的随想，生性惫懒，更新日期不定">
+<meta name="twitter:title" content="Java的String类分析">
+<meta name="twitter:description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
 
 
 
@@ -132,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/22/Java的String类分析/"/>
 
 
 
 
 
-  <title>公无渡河，公竟渡河</title>
+  <title>Java的String类分析 | 公无渡河，公竟渡河</title>
   
 
 
@@ -157,9 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -222,9 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -254,9 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/22/Java的String类分析/" itemprop="url">Java的String类分析</a></h1>
+          <h1 class="post-title" itemprop="name headline">Java的String类分析</h1>
         
 
         <div class="post-meta">
@@ -306,15 +303,11 @@
       
 
       
-        
-          
-            <p>1.String是不可变类。<br>这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？<br>通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成private类型，且由于没有提供对外的public setters方法，String类属性不可被改变。其中，需要重点关注属性value[]，其被final char修饰，因此字符型数组value只会被赋值一次就不可修改。其存储内容正好是String中的单个字符内容<br>当使用+进行多个字符串连接时，实际上是产生了一个StringBuilder对象和一个String对象</p>
+        <p>1.String是不可变类。<br>这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？<br>通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成private类型，且由于没有提供对外的public setters方法，String类属性不可被改变。其中，需要重点关注属性value[]，其被final char修饰，因此字符型数组value只会被赋值一次就不可修改。其存储内容正好是String中的单个字符内容<br>当使用+进行多个字符串连接时，实际上是产生了一个StringBuilder对象和一个String对象</p>
 <p>2.String类 重写了Object类的equlas方法，使得比较字符串内容是否相等可以直接使用equlas方法。<br>关于equals以及相应的hashCode方法参见两者之间的关系</p>
 <p>3.String字符串常量池<br>JVM为了提高性能和减少内存开销，内部维护了一个字符串常量池，每当创建字符串常量时，JVM首先检查字符串常量池，如果常量池中已经存在，则返回池中的字符串对象引用，否则创建该字符串对象并放入池中。String是驻留的！<br>但与创建字符串常量方式不同的是，当使用new String(String str)方式等创建字符串对象时，不管字符串常量池中是否有与此相同内容的字符串，都会在堆内存中创建新的字符串对象。两者引用的位置不同， 并且字符串常量池中的字符串与通过new String(..)等方式创建的字符串对象之间没有直接的关系，但是，可以通过字符串的intern()方法找到此种关联。intern()方法返回字符串对象在字符串常量池中的对象引用，若字符串常量池中尚未有此字符串，则创建一新的字符串常量放置于池中</p>
 <p>4.String/StringBuilder/StringBuffer区别<br>String是不可变字符串对象，StringBuilder和StringBuffer是可变字符串对象（其内部的字符数组长度可变），StringBuffer线程安全，StringBuilder非线程安全。String是不可变类（immutable），每次在String对象上的操作都会生成一个新的对象；StringBuffer和StringBuilder则允许在原来对象上进行操作，而不用每次增加对象；StringBuffer是线程安全的，但效率较低，而StringBuilder则不是效率最高</p>
 
-          
-        
       
     </div>
     
@@ -331,140 +324,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="公无渡河，公竟渡河">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/22/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-22T14:00:19+08:00">
-                2017-08-22
-              </time>
+              <a href="/2017/08/22/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -474,10 +355,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -485,6 +367,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -666,10 +552,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
