@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
+<meta name="description" content="异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。当条件生成时，错误将引发异常。  Throwable： 有两个重要的子类：Exception（异常）和 Error（错误），二者都是 Java 异常处理的重要子类，各自都包含">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的String类分析">
-<meta property="og:url" content="http://yoursite.com/2017/08/25/Java的String类分析/index.html">
+<meta property="og:title" content="Java中的异常">
+<meta property="og:url" content="http://yoursite.com/2017/08/30/Java中的异常/index.html">
 <meta property="og:site_name" content="公无渡河，公竟渡河">
-<meta property="og:description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
+<meta property="og:description" content="异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。当条件生成时，错误将引发异常。  Throwable： 有两个重要的子类：Exception（异常）和 Error（错误），二者都是 Java 异常处理的重要子类，各自都包含">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-25T09:39:18.000Z">
+<meta property="og:updated_time" content="2017-08-30T05:53:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的String类分析">
-<meta name="twitter:description" content="1.String是不可变类。这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成privat">
+<meta name="twitter:title" content="Java中的异常">
+<meta name="twitter:description" content="异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。当条件生成时，错误将引发异常。  Throwable： 有两个重要的子类：Exception（异常）和 Error（错误），二者都是 Java 异常处理的重要子类，各自都包含">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/25/Java的String类分析/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/30/Java中的异常/"/>
 
 
 
 
 
-  <title>Java的String类分析 | 公无渡河，公竟渡河</title>
+  <title>Java中的异常 | 公无渡河，公竟渡河</title>
   
 
 
@@ -278,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/25/Java的String类分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/Java中的异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhengyukun">
@@ -295,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java的String类分析</h1>
+          <h1 class="post-title" itemprop="name headline">Java中的异常</h1>
         
 
         <div class="post-meta">
@@ -307,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T17:35:48+08:00">
-                2017-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T13:51:54+08:00">
+                2017-08-30
               </time>
             
 
@@ -367,10 +367,17 @@
       
 
       
-        <p>1.String是不可变类。<br>这句话其实大家都很熟悉了，那么具体什么是不可变类呢？一般认为：当对象一旦创建完成后，在正常情况下，对象的状态不会因外界的改变而改变（对象的状态是指对象的属性，包括属性的类型及属性值）。如何理解？<br>通过对String类的定义，类名前面用了final class修饰，因此，String类不能被继承。对于其属性定义，可以看出，属性value[]和hash都是被定义成private类型，且由于没有提供对外的public setters方法，String类属性不可被改变。其中，需要重点关注属性value[]，其被final char修饰，因此字符型数组value只会被赋值一次就不可修改。其存储内容正好是String中的单个字符内容<br>当使用+进行多个字符串连接时，实际上是产生了一个StringBuilder对象和一个String对象</p>
-<p>2.String类 重写了Object类的equlas方法，使得比较字符串内容是否相等可以直接使用equlas方法。<br>关于equals以及相应的hashCode方法参见两者之间的关系</p>
-<p>3.String字符串常量池<br>JVM为了提高性能和减少内存开销，内部维护了一个字符串常量池，每当创建字符串常量时，JVM首先检查字符串常量池，如果常量池中已经存在，则返回池中的字符串对象引用，否则创建该字符串对象并放入池中。String是驻留的！<br>但与创建字符串常量方式不同的是，当使用new String(String str)方式等创建字符串对象时，不管字符串常量池中是否有与此相同内容的字符串，都会在堆内存中创建新的字符串对象。两者引用的位置不同， 并且字符串常量池中的字符串与通过new String(..)等方式创建的字符串对象之间没有直接的关系，但是，可以通过字符串的intern()方法找到此种关联。intern()方法返回字符串对象在字符串常量池中的对象引用，若字符串常量池中尚未有此字符串，则创建一新的字符串常量放置于池中</p>
-<p>4.String/StringBuilder/StringBuffer区别<br>String是不可变字符串对象，StringBuilder和StringBuffer是可变字符串对象（其内部的字符数组长度可变），StringBuffer线程安全，StringBuilder非线程安全。String是不可变类（immutable），每次在String对象上的操作都会生成一个新的对象；StringBuffer和StringBuilder则允许在原来对象上进行操作，而不用每次增加对象；StringBuffer是线程安全的，但效率较低，而StringBuilder则不是效率最高</p>
+        <p>异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。当条件生成时，错误将引发异常。</p>
+<p> Throwable： 有两个重要的子类：Exception（异常）和 Error（错误），二者都是 Java 异常处理的重要子类，各自都包含大量子类<br>通常，Java的异常(包括Exception和Error)分为可查的异常（checked exceptions）和不可查的异常（unchecked exceptions）。<br>不可查异常(编译器不要求强制处置的异常):包括运行时异常（RuntimeException与其子类）和错误（Error）<br> 可查异常（编译器要求必须处置的异常）：正确的程序在运行中，很容易出现的、情理可容的异常状况。可查异常虽然是异常状况，但在一定程度上它的发生是可以预计的，而且一旦发生这种异常状况，就必须采取某种方式进行处理。 这种异常的特点是Java编译器会检查它，也就是说，当程序中可能出现这类异常，要么用try-catch语句捕获它，要么用throws子句声明抛出它，否则编译不会通过。</p>
+<p> 在 Java 应用程序中，异常处理机制为：抛出异常，捕捉异常。<br>  任何Java代码都可以抛出异常，如：自己编写的代码、来自Java开发环境包中代码，或者Java运行时系统。无论是谁，都可以通过Java的throw语句抛出异常。 从方法中抛出的任何异常都必须使用throws子句。 捕捉异常通过try-catch语句或者try-catch-finally语句实现。总体来说，Java规定：对于可查异常必须捕捉、或者声明抛出。允许忽略不可查的RuntimeException和Error。</p>
+<p>捕捉异常<br>try 块：用于捕获异常。其后可接零个或多个catch块，如果没有catch块，则必须跟一个finally块。<br>catch 块：用于处理try捕获到的异常。<br>finally 块：无论是否捕获或处理异常，finally块里的语句都会被执行。当在try块或catch块中遇到return语句时，finally语句块将在方法返回之前被执行。在以下4种特殊情况下，finally块不会被执行：<br>1）在finally语句块中发生了异常。<br>2）在前面的代码中用了System.exit()退出程序。<br>3）程序所在的线程死亡。<br>4）关闭CPU。</p>
+<p>抛出异常<br>  Throws抛出异常的规则：<br>    1) 如果是不可查异常（unchecked exception），即Error、RuntimeException或它们的子类，那么可以不使用throws关键字来声明要抛出的异常，编译仍能顺利通过，但在运行时会被系统抛出。<br>    2）必须声明方法可抛出的任何可查异常（checked exception）。即如果一个方法可能出现受可查异常，要么用try-catch语句捕获，要么用throws子句声明将它抛出，否则会导致编译错误<br>    3）仅当抛出了异常，该方法的调用者才必须处理或者重新抛出该异常。当方法的调用者无力处理该异常的时候，应该继续抛出，而不是囫囵吞枣。<br>    4）调用方法必须遵循任何可查异常的处理和声明规则。若覆盖一个方法，则不能声明与覆盖方法不同的异常。声明的任何异常必须是被覆盖方法所声明异常的同类或子类。</p>
+<p>Java中常见的异常</p>
+<ol>
+<li>runtimeException子类:<pre><code>1、 java.lang.ArrayIndexOutOfBoundsException
+</code></pre> 数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出<br>2、java.lang.ArithmeticException<br> 算术条件异常。譬如：整数除零等。<br>3、java.lang.NullPointerException<br> 空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等<br>4、java.lang.ClassNotFoundException<br> 找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。<br>5、java.lang.NegativeArraySizeException  数组长度为负异常<br>6、java.lang.ArrayStoreException 数组中包含不兼容的值抛出的异常<br>7、java.lang.SecurityException 安全性异常<br>8、java.lang.IllegalArgumentException 非法参数异常<br>2.IOException<br>IOException：操作输入流和输出流时可能出现的异常。<br>EOFException   文件已结束异常<br>FileNotFoundException   文件未找到异常</li>
+<li>其他<br>ClassCastException    类型转换异常类<br>ArrayStoreException  数组中包含不兼容的值抛出的异常<br>SQLException   操作数据库异常类<br>NoSuchFieldException   字段未找到异常<br>NoSuchMethodException   方法未找到抛出的异常<br>NumberFormatException    字符串转换为数字抛出的异常<br>StringIndexOutOfBoundsException 字符串索引超出范围抛出的异常<br>IllegalAccessException  不允许访问某类异常<br>InstantiationException  当应用程序试图使用Class类中的newInstance()方法创建一个类的实例，而指定的类对象无法被实例化时，抛出该异常</li>
+</ol>
 
       
     </div>
@@ -401,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/25/Java的关键字分析/" rel="next" title="Java的关键字分析">
-                <i class="fa fa-chevron-left"></i> Java的关键字分析
+              <a href="/2017/08/30/Java的Object类分析/" rel="next" title="Java的Object类分析">
+                <i class="fa fa-chevron-left"></i> Java的Object类分析
               </a>
             
           </div>
@@ -410,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/30/Java的Object类分析/" rel="prev" title="Java的Object类分析">
-                Java的Object类分析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
