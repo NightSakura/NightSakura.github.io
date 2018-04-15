@@ -37,36 +37,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -75,19 +50,29 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="zhengyukun,java,kafuka,netty,dubbo" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
 
 
 
@@ -112,11 +97,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -158,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -204,42 +189,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -287,7 +242,7 @@
         
           
           <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+            <h1 class="archive-year" id="archive-year-2017">2017</h1>
           </div>
         
         
@@ -358,475 +313,68 @@
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1312473780,2374137165&fm=26&gp=0.jpg"
-               alt="zhengyukun" />
-          <p class="site-author-name" itemprop="name">zhengyukun</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1312473780,2374137165&fm=26&gp=0.jpg"
+                alt="zhengyukun" />
+            
+              <p class="site-author-name" itemprop="name">zhengyukun</p>
               <p class="site-description motion-element" itemprop="description">记录工作和生活中的随想，生性惫懒，更新日期不定</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
           
+
+          
+
+          
+          
+
+          
+          
+
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="G" target="_blank" title="0">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      0
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="i" target="_blank" title="1">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      1
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank" title="2">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      2
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="H" target="_blank" title="3">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      3
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank" title="4">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      4
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="b" target="_blank" title="5">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      5
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href=":" target="_blank" title="6">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      6
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank" title="7">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      7
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank" title="8">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      8
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank" title="9">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      9
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="p" target="_blank" title="10">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      10
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="s" target="_blank" title="11">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      11
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href=":" target="_blank" title="12">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      12
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank" title="13">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      13
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank" title="14">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      14
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="g" target="_blank" title="15">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      15
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="i" target="_blank" title="16">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      16
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank" title="17">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      17
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank" title="18">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      18
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank" title="19">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      19
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="b" target="_blank" title="20">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      20
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="." target="_blank" title="21">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      21
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="c" target="_blank" title="22">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      22
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="o" target="_blank" title="23">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      23
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="m" target="_blank" title="24">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      24
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="/" target="_blank" title="25">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      25
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="N" target="_blank" title="26">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      26
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="i" target="_blank" title="27">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      27
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="g" target="_blank" title="28">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      28
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="h" target="_blank" title="29">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      29
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="t" target="_blank" title="30">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      30
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="S" target="_blank" title="31">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      31
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="a" target="_blank" title="32">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      32
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="k" target="_blank" title="33">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      33
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="u" target="_blank" title="34">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      34
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="r" target="_blank" title="35">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      35
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="a" target="_blank" title="36">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      36
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -843,12 +391,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zhengyukun</span>
 
@@ -856,11 +401,17 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
 
 
         
@@ -880,6 +431,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -914,48 +467,54 @@
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -988,6 +547,10 @@
 
 
 
+
+
+
+
   
 
 
@@ -998,6 +561,9 @@
 
   
 
+  
+
+  
   
 
   
